@@ -30,7 +30,7 @@ func main() {
 
 	// Validasi combo lang + method
 	if !supportedCombos(*lang, *method) {
-		log.Fatalf("❌ Kombinasi lang=%q + method=%q tidak didukung.\n   Coba: base64 untuk semua bahasa, hex untuk semua kecuali shell-perlu-xxd, unicode hanya JS/Python.", *lang, *method)
+		log.Fatalf("[×] Kombinasi lang=%q + method=%q tidak didukung.\n   Coba: base64 untuk semua bahasa, hex untuk semua kecuali shell-perlu-xxd, unicode hanya JS/Python.", *lang, *method)
 	}
 
 	// Auto-generate out path kalau kosong
@@ -73,7 +73,7 @@ func main() {
 		log.Fatalf("Write output: %v", err)
 	}
 
-	fmt.Println("✅ Obfuscated successfully")
+	fmt.Println("[✓] Obfuscated successfully")
 	fmt.Printf("   In     : %s (%d bytes)\n", *in, len(source))
 	fmt.Printf("   Out    : %s (%d bytes)\n", *out, len(output))
 	fmt.Printf("   Lang   : %s\n", *lang)
