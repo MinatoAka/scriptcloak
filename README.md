@@ -26,3 +26,9 @@ go build -o scriptcloak
 # Shell with base64
 ./scriptcloak -in deploy.sh -out deploy.obf.sh -lang shell -method base64
 ```
+
+## Limitations
+- Not encryption — trivially reversible
+- Shell hex needs xxd
+- Unicode only supports BMP (< U+10000)
+- Larger output (base64: 1.33x, hex: 4x, unicode: 6x)
