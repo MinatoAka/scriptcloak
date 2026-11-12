@@ -8,3 +8,10 @@ Simple obfuscator for scripts. Wraps source code in an encoded payload + decoder
 
 ```bash
 go install github.com/MinatoAka/scriptcloak@latest
+```
+Or build local:
+```bash
+git clone https://github.com/MinatoAka/scriptcloak
+cd scriptcloak
+go build -o scriptcloak
+```
