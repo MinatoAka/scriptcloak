@@ -19,6 +19,8 @@ Or build local:
 ```bash
 git clone https://github.com/MinatoAka/scriptcloak
 cd scriptcloak
+go get github.com/MinatoAka/mylog_go
+go mod tidy
 go build -o scriptcloak
 ```
 
